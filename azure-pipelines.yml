@@ -6,9 +6,9 @@ pool:
 
 resources:
  repositories:
-   - repository: azure-vote-helm-chart
+   - repository: helmrepo
      type: github
-     name: arpanD93/azure-vote-helm-chart
+     name: arpanD93/helmrepo
      endpoint: github
 
 variables:
