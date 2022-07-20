@@ -8,11 +8,11 @@ resources:
  repositories:
    - repository: helmrepo
      type: github
-     name: utkarshpoc/azure-vote-helm-chart
+     name: arpanD93/azure-vote-helm-chart
      endpoint: github
 
 variables:
-  acr.name: acrdemoutkarsh
+  acr.name: acrdemocompanyacr01
   acr.repo.name: helmdemo/vote-app
   HELM_EXPERIMENTAL_OCI: 1
 
@@ -85,8 +85,8 @@ stages:
                 inputs:
                   connectionType: 'Azure Resource Manager'
                   azureSubscription: '$(azure.service.connection)'
-                  azureResourceGroup: 'demos'
-                  kubernetesCluster: 'aksdemoutkarsh'
+                  azureResourceGroup: 'DEMO_AKS'
+                  kubernetesCluster: 'aksdemo'
                   namespace: 'helmdemo'
                   command: 'upgrade'
                   chartType: 'FilePath'
