@@ -6,7 +6,7 @@ pool:
 
 resources:
  repositories:
-   - repository: helmrepo
+   - repository: azure-vote-helm-chart
      type: github
      name: arpanD93/azure-vote-helm-chart
      endpoint: github
@@ -23,7 +23,7 @@ stages:
       - job: helm_publish_acr
         displayName: helm chart publish
         steps:
-        - checkout: helmrepo
+        - checkout: azure-vote-helm-chart
           displayName: download chart
 
         - script: |
